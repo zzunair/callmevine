@@ -1,0 +1,524 @@
+{
+  "sections": {
+    "image_slider_t6WYwd": {
+      "type": "image-slider",
+      "blocks": {
+        "slider_block_LbiAWk": {
+          "type": "slider_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/promo-autunno-bnn_1.png",
+            "show_mobile": false,
+            "title": "DON'T MISS OUR SUPER AUTUMN PROMO",
+            "description": "SPECIAL WINES... AT A VERY SPECIAL PRICE!",
+            "button_label": "CLICK HERE",
+            "button_link": "https:\/\/your-link.com"
+          }
+        },
+        "slider_block_QcxNkk": {
+          "type": "slider_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/angelini-login-hp_1.png",
+            "show_mobile": false,
+            "title": "BECOME A PARTNER OF OUR WINE CLUB",
+            "description": "JOIN THE ANGELINI FAMILY",
+            "button_label": "Register now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_LbiAWk",
+        "slider_block_QcxNkk"
+      ],
+      "settings": {
+        "banner_class": "container"
+      }
+    },
+    "category_slider_qK7Mbh": {
+      "type": "category-slider",
+      "blocks": {
+        "collection_N8tyVK": {
+          "type": "collection",
+          "settings": {
+            "collection": "biodynamic-wine"
+          }
+        },
+        "collection_bthyfD": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-wine"
+          }
+        },
+        "collection_iXAinR": {
+          "type": "collection",
+          "settings": {
+            "collection": "dessert-wine"
+          }
+        },
+        "collection_7X7me6": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-wine"
+          }
+        },
+        "collection_3RFGpH": {
+          "type": "collection",
+          "settings": {
+            "collection": "rose-wine"
+          }
+        },
+        "collection_BxnH4m": {
+          "type": "collection",
+          "settings": {
+            "collection": "red-wine"
+          }
+        }
+      },
+      "block_order": [
+        "collection_N8tyVK",
+        "collection_bthyfD",
+        "collection_iXAinR",
+        "collection_7X7me6",
+        "collection_3RFGpH",
+        "collection_BxnH4m"
+      ],
+      "settings": {
+        "category_title": "Categorie Hot",
+        "custom_class": "container"
+      }
+    },
+    "banner_images_aQiYqL": {
+      "type": "banner-images",
+      "blocks": {
+        "image_6LBpyK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_2048x2048_b2e92fa0-ab64-468a-aa26-e1f956d839c9.png",
+            "image_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "image_6LBpyK"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 30,
+        "custom_class": "top-banner container",
+        "custom_id": "top-banner"
+      }
+    },
+    "products_collection_slider_r6Jb34": {
+      "type": "products-collection-slider",
+      "settings": {
+        "collection": "collection-wine",
+        "viewall": true,
+        "title": "Deals of the week",
+        "description": "Explore Our Amazing Selection",
+        "viewall_text": "View All",
+        "viewall_link": "\/collection",
+        "slider_id": "new-product-slider",
+        "products_to_show": 6,
+        "navigation_amount": 4,
+        "custom_class": "new-product",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 50
+      }
+    },
+    "image_box_faHygi": {
+      "type": "Image-box",
+      "blocks": {
+        "image_block_6WCfmc": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1_1920x_e8f60690-ed2b-49d1-b283-46da95998443.png",
+            "title": "Strong Beer <br> Sweet Taste",
+            "description": "Good beer right here!",
+            "button_label": "",
+            "button_link": "https:\/\/your-link.com"
+          }
+        },
+        "image_block_A7wWD4": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_1_1920x_00106c28-3a4e-4ec7-98ca-7e84f18a6887.png",
+            "title": "A TASTE OF <br> SUMMER",
+            "description": "From to\n$69.99",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "image_block_FwXKqT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1920x_60c009ae-af3d-4ade-8361-f2356ff7a728.png",
+            "title": "French <br><b>White Wine<\/b>",
+            "description": "Father’s Day Sale <br>\n40% off Sitewide! ",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_6WCfmc",
+        "image_block_A7wWD4",
+        "image_block_FwXKqT"
+      ],
+      "settings": {
+        "custom_class": "three-box-banner",
+        "custom_id": "",
+        "background_color": "#f8f8f8",
+        "padding": "50px 0 50px 0"
+      }
+    },
+    "products_collection_slider_VUcQrx": {
+      "type": "products-collection-slider",
+      "settings": {
+        "collection": "red-wine",
+        "viewall": true,
+        "title": "PROSECCO SUMMER",
+        "description": "Sparkling discounts on a selection of labels.",
+        "viewall_text": "Discover the promo",
+        "viewall_link": "\/",
+        "slider_id": "prosecco_slider2",
+        "products_to_show": 6,
+        "navigation_amount": 4,
+        "custom_class": "new-product",
+        "custom_id": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "trend_section_bPaUWP": {
+      "type": "trend-section",
+      "blocks": {
+        "button_CKWX3P": {
+          "type": "button",
+          "settings": {
+            "button_text": "VINI BIOLOGICI",
+            "button_link": "#",
+            "button_style": "red"
+          }
+        },
+        "button_wwNteG": {
+          "type": "button",
+          "settings": {
+            "button_text": "LOYALTY",
+            "button_link": "#",
+            "button_style": "white"
+          }
+        },
+        "button_DPqqfR": {
+          "type": "button",
+          "settings": {
+            "button_text": "TECA",
+            "button_link": "",
+            "button_style": "white"
+          }
+        },
+        "button_CReftb": {
+          "type": "button",
+          "settings": {
+            "button_text": "WINE BOX",
+            "button_link": "",
+            "button_style": "white"
+          }
+        },
+        "button_P4BPgC": {
+          "type": "button",
+          "settings": {
+            "button_text": "ABBINAMENTI",
+            "button_link": "",
+            "button_style": "white"
+          }
+        },
+        "button_zqgfc7": {
+          "type": "button",
+          "settings": {
+            "button_text": "NOVITÀ",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "button_CKWX3P",
+        "button_wwNteG",
+        "button_DPqqfR",
+        "button_CReftb",
+        "button_P4BPgC",
+        "button_zqgfc7"
+      ],
+      "settings": {
+        "vine_trend_image": "shopify:\/\/shop_images\/vine-trend.png",
+        "title": "I TREND DEL MOMENTO",
+        "description": "Non sai cosa scegliere? Scopri le <b>categorie più cercate<\/b>\n                        ed i <b>vini preferiti<\/b> dei nostri clienti.",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "custom_class": "container"
+      }
+    },
+    "featured_collection_ECN8tb": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "collection-wine",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "image_box_jGDhAk": {
+      "type": "Image-box",
+      "blocks": {
+        "image_block_q8FzJw": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-44.jpg",
+            "title": "Open weekend",
+            "description": "Tasting Tours",
+            "button_label": "Join now",
+            "button_link": "https:\/\/your-link.com"
+          }
+        },
+        "image_block_fMxiMz": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-47.jpg",
+            "title": "up to 40% off",
+            "description": "Open weekend",
+            "button_label": "shop now",
+            "button_link": ""
+          }
+        },
+        "image_block_FLEyJb": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-45.jpg",
+            "title": "family party",
+            "description": "from only $145",
+            "button_label": "shop now",
+            "button_link": ""
+          }
+        },
+        "image_block_Ctd4qY": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-46.jpg",
+            "title": "Black Friday",
+            "description": "best gifts",
+            "button_label": "Get offer",
+            "button_link": ""
+          }
+        },
+        "image_block_km4qzA": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-48.jpg",
+            "title": "collection",
+            "description": "wine rose",
+            "button_label": "view wine",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_q8FzJw",
+        "image_block_fMxiMz",
+        "image_block_FLEyJb",
+        "image_block_Ctd4qY",
+        "image_block_km4qzA"
+      ],
+      "settings": {
+        "custom_class": "six-banner six_banner",
+        "custom_id": "six-banner",
+        "background_color": "#ffffff",
+        "padding": "0px 0 50px 0"
+      }
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_yBVUUA": {
+          "type": "slide",
+          "settings": {
+            "heading": "Harvest 2 X 1",
+            "heading_size": "h2",
+            "subheading": "Buy 2 pieces and pay for 1",
+            "button_label": "Discover the Collection",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_jM8a7Y": {
+          "type": "slide",
+          "settings": {
+            "heading": "BEST SELLERS",
+            "heading_size": "h2",
+            "subheading": "The most popular labels",
+            "button_label": "Start here",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_zGnwQX": {
+          "type": "slide",
+          "settings": {
+            "heading": "WINERIES AND PRODUCERS",
+            "heading_size": "h2",
+            "subheading": "Discover all the wineries in the catalogue",
+            "button_label": "See more",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_yBVUUA",
+        "slide_jM8a7Y",
+        "slide_zGnwQX"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".banner__heading {margin-bottom: 0; font-size: 23px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; color: #fff; text-align: left; letter-spacing: 2px;}",
+        ".banner__text.rte p {color: #fff !important;}",
+        ".slideshow__text.banner__box {display: flex; flex-direction: column; justify-content: center; background: transparent !important;}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "custom_liquid_7hggkU": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<h2 class=\"custom-text cursive\">\n  Our large cellar\n<\/div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "products_collection_slider_4CNmmH": {
+      "type": "products-collection-slider",
+      "disabled": true,
+      "settings": {
+        "collection": "collection-wine",
+        "viewall": false,
+        "title": "",
+        "description": "",
+        "viewall_text": "",
+        "viewall_link": "",
+        "slider_id": "product_large_cellar",
+        "products_to_show": 4,
+        "navigation_amount": 4,
+        "custom_class": "add here",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "products_collection_slider_TPEUjp": {
+      "type": "products-collection-slider",
+      "disabled": true,
+      "settings": {
+        "collection": "white-wine",
+        "viewall": true,
+        "title": "SUMMER WHITES",
+        "description": "For a fresh and aromatic August.",
+        "viewall_text": "View More",
+        "viewall_link": "\/",
+        "slider_id": "SUMMER_slider",
+        "products_to_show": 4,
+        "navigation_amount": 3,
+        "custom_class": "add here",
+        "custom_id": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "custom_liquid_Gzq9Ji": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div class=\"double-container\">\n    <div class=\"double-banner\">\n        <div class=\"double-banner__content\">\n            <div class=\"double-banner__wrapper\">\n                <p class=\"double-banner__header\">HARVEST IN SEPTEMBER<\/p>\n                <h2 class=\"cursive double-banner__title color-primary\">Get 2 pay 1<\/h2>\n                <p class=\"double-banner__text\">The harvest season has begun, the most awaited and feared moment by every\n                    producer. Take the 2x1 harvest promo: buy 2 pieces and pay 1.<\/p>\n                <a class=\"double-banner__btn\" href=\"#\">Discover the\n                    selection<\/a>\n            <\/div>\n        <\/div>\n        <div class=\"double-banner__img-container\"\n            style=\"background-image: url('https:\/\/www.signorvino.com\/dw\/image\/v2\/BLCF_PRD\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw0c2a608b\/05_en_BottomBlock_CW3624_Harvest_2x1_Thematic_sgv 1.jpg')\">\n        <\/div>\n    <\/div>\n<\/div>\n\n\n<style type=\"text\/css\">\n.double-banner {\n  display: flex;\n}\n.double-banner__content {\n  background-color: #f6f1e8;\n  width: 50%;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -ms-flex-pack: center;\n  justify-content: center;\n  padding: 80px 0 80px 5.92308rem;\n  -ms-flex-align: end;\n  align-items: flex-end;\n  padding-right: 22.46154rem;\n}\n.double-banner__img-container {\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  width: 50%;\n}\n\np.double-banner__header {\n    font-weight: 700;\n    font-size: 12px;\n    color: #000;\n    margin: 0;\n}\np.double-banner__text {\n    margin: 0;\n    font-size: 14px;\n    line-height: 22px;\n    color: #000;\n}\na.double-banner__btn {\n    color: #000;\n    font-size: 13px;\n    line-height: 20px;\n    text-underline-offset: .30769rem;\n    margin-top: 20px;\n    display: block;\n}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_NdqfHx": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": "<div class=\"pre-footer\">\n    <div class=\"grid-container\">\n        <div class=\"notes\">\n            <div class=\"note cell\">\n                <img class=\"icon\"\n                    src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw23766825\/images\/footer\/gift.svg\"\n                    alt=\"gift\">\n                <h3 class=\"show-for-small-only color-primary\">GIFT GUIDE<\/h3>\n                <p class=\"big no-margin\">You can find the perfect gift, play it safe!<\/p> <a class=\"secondary\"\n                    href=\"\/\">Get inspired<\/a>\n            <\/div>\n            <div class=\"note cell grid-x small-align-left align-center\">\n                <img class=\"icon\"\n                    src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw6385276f\/images\/footer\/signorvino-club.svg\"\n                    alt=\"signorvino club\">\n                <h3 class=\"show-for-small-only color-expert\">SIGNORVINO CLUB<\/h3>\n                <p class=\"big no-margin\">Discover the Signorvino loyalty program<\/p> <a class=\"secondary\"\n                    href=\"\/\">Find out more<\/a>\n            <\/div>\n            <div class=\"note cell grid-x small-align-left align-right\">\n                <img class=\"icon\"\n                    src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwd7e0a87c\/images\/footer\/allergeni.svg\"\n                    alt=\"allergeni\" width=\"30\" height=\"30\">\n                <h3 class=\"show-for-small-only color-ottanio-medium\">WORK WITH US<\/h3>\n                <p class=\"big no-margin\">Discover the open positions and join the team!<\/p> <a class=\"secondary\"\n                    href=\"\/\">Find out more<\/a>\n            <\/div>\n        <\/div>\n    <\/div>\n<\/div>\n\n<style type=\"text\/css\">\n   \n    .pre-footer {\n        background-color: #fafafa;\n    }\n    .pre-footer .notes {\n        display: grid;\n        grid-template-columns: auto auto auto\n    }\n    .pre-footer .notes h3,\n    .pre-footer .notes p {\n        margin: 0;\n    }\n    .pre-footer .notes .note {\n        display: grid;\n        grid-row-gap: .61538rem\n    }\n    .pre-footer .notes p.big.no-margin {\n        color: #000;\n        font-size: 14px;\n    }\n    .pre-footer .notes a.secondary {\n        color: #000;\n        font-size: 14px;\n        text-underline-offset: 5px;\n    }\n    @media print,screen and (max-width: 47.99875em) {\n        .pre-footer .notes {\n            grid-template-columns:100%;\n            padding-top: 0;\n            padding-bottom: 0\n        }\n    } \n<\/style>",
+        "color_scheme": "scheme-3",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "image_slider_t6WYwd",
+    "category_slider_qK7Mbh",
+    "banner_images_aQiYqL",
+    "products_collection_slider_r6Jb34",
+    "image_box_faHygi",
+    "products_collection_slider_VUcQrx",
+    "trend_section_bPaUWP",
+    "featured_collection_ECN8tb",
+    "image_box_jGDhAk",
+    "slideshow",
+    "custom_liquid_7hggkU",
+    "products_collection_slider_4CNmmH",
+    "products_collection_slider_TPEUjp",
+    "custom_liquid_Gzq9Ji",
+    "custom_liquid_NdqfHx"
+  ]
+}

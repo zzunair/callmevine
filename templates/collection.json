@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "breadcrumb_JzpCJ4": {
+      "type": "breadcrumb",
+      "settings": {
+        "custom_class": "",
+        "custom_id": "",
+        "background_color": "#ffffff",
+        "padding": "0 0 0 0"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-3",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "standard",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "faqs_g983cr": {
+      "type": "faqs",
+      "blocks": {
+        "faq_item_aECxct": {
+          "type": "faq_item",
+          "settings": {
+            "faq_title": "What are the benefits of wearable technology?",
+            "faq_description": "Wearable technology like smartwatches can help us meet our fitness goals. These devices are versatile enough to carry out several hands-free functions, while we go about our daily activities. From receiving text messages or emails to GPS location tracking, a smartwatch offers more convenience when synced with your mobile phone. It is portable and lightweight, easy to carry around wherever you go."
+          }
+        },
+        "faq_item_AUNFD7": {
+          "type": "faq_item",
+          "settings": {
+            "faq_title": "What are the barriers in using a wearable device?",
+            "faq_description": "The biggest barrier to using wearables is their limited battery life. Some smartwatches can be used for a full day or two on a single charge, depending on the brand. Others exhaust their battery in less than a day of normal use. You need to charge it daily to ensure continuous usage.\n\nAnother disadvantage would be the cost. The price difference between a smartwatch and a mobile phone is not that much. Some users would find buying a smartphone a better deal because it has more advantage in terms of screen size and storage. Moreover, certain smartwatch models are not water-resistant and have a shorter lifespan than mobile devices."
+          }
+        },
+        "faq_item_KQWfV9": {
+          "type": "faq_item",
+          "settings": {
+            "faq_title": "What is the difference between a smartwatch and a fitness tracker?",
+            "faq_description": "A smartwatch performs a general set of functions and fitness tracking is just one of them. It notifies users of recently received mails and text messages and has a whole range of activity monitors beyond fitness. On the other hand, a fitness tracker, also called a fitness band, is equipped with activity trackers that solely focus on health and exercise."
+          }
+        },
+        "faq_item_WNwXbk": {
+          "type": "faq_item",
+          "settings": {
+            "faq_title": "What are the benefits of wearing a smartwatch?",
+            "faq_description": "Compared to fitness trackers, you can cover more activities and functions when you wear a smartwatch. This is the best device for multitaskers who want to keep fit, receive work notifications and be on the loop at the same time. A smartwatch is a great companion for people on-the-go as it helps you adopt a well-rounded lifestyle. Built-in health monitors allow you to accomplish fitness goals while never missing important emails and messages."
+          }
+        },
+        "faq_item_JyP96R": {
+          "type": "faq_item",
+          "settings": {
+            "faq_title": "How do I charge my wearable device?",
+            "faq_description": "Different smartwatch brands and models have different charging systems. Generally, however, you need a USB cable that connects the device to a power source. Some variants can be charged without a charger. Power Banks and certain USB ports may accommodate your smartwatch brand and model. There are also Dock Micro Type-C magnetic chargers you can use for faster results. When in doubt, check your manual for information or consult an expert."
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_aECxct",
+        "faq_item_AUNFD7",
+        "faq_item_KQWfV9",
+        "faq_item_WNwXbk",
+        "faq_item_JyP96R"
+      ],
+      "settings": {
+        "section_title": "Frequently Asked",
+        "section_id": "faq-section",
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumb_JzpCJ4",
+    "banner",
+    "product-grid",
+    "faqs_g983cr"
+  ]
+}

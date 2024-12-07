@@ -1,0 +1,260 @@
+{
+  "sections": {
+    "breadcrumb_X7r7MD": {
+      "type": "breadcrumb",
+      "settings": {
+        "custom_class": "",
+        "custom_id": "",
+        "background_color": "#fffaf3",
+        "padding": "20px 0"
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "text_98d6m6": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.short_description.value }}",
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "text_98d6m6",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-0b3a6393-68ef-40d4-9973-0b1d7d9c8282",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 32,
+        "padding_bottom": 60
+      }
+    },
+    "product_custom_data_NtBFxX": {
+      "type": "product-custom-data",
+      "blocks": {
+        "content_block_tthcLz": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/wine-glass.svg",
+            "title": "Tipologia",
+            "description": "{{ product.metafields.custom.type.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_gRQaVg": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/calendar-2-line.svg",
+            "title": "Annata",
+            "description": "{{ product.metafields.custom.vintage.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_YpyfdM": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/grapes.svg",
+            "title": "Uve",
+            "description": "{{ product.metafields.custom.grapes.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_PqEpeE": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/botol.svg",
+            "title": "Alcool",
+            "description": "{{ product.metafields.custom.alcohol_percentage.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_8nwjKk": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/noun-wine-1240144-svg.svg",
+            "title": "Formato",
+            "description": "{{ product.metafields.custom.format.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_T4NRxA": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/region_ad085a19-3d2f-4139-8227-a3e9e1a149d7.svg",
+            "title": "Regione",
+            "description": "{{ product.metafields.shopify.region | metafield_text: field: 'label' }}",
+            "block_class": "regione-icon"
+          }
+        },
+        "content_block_PJi9PR": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/champagne.svg",
+            "title": "Occasione",
+            "description": "{{ product.metafields.custom.occasion.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_TQV3dh": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/location.svg",
+            "title": "Origine",
+            "description": "{{ product.metafields.custom.origin.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_EKJgBA": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/fork-and-glass.svg",
+            "title": "Abbinamento",
+            "description": "{{ product.metafields.custom.pairing.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_nTyNCb": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/list.svg",
+            "title": "Allergeni",
+            "description": "{{ product.metafields.custom.allergens.value }}",
+            "block_class": ""
+          }
+        },
+        "content_block_jtWPj4": {
+          "type": "content_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/calendar-2-line.svg",
+            "title": "Denominazione",
+            "description": "{{ product.metafields.custom.denominazione.value }}",
+            "block_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_block_tthcLz",
+        "content_block_gRQaVg",
+        "content_block_YpyfdM",
+        "content_block_PqEpeE",
+        "content_block_8nwjKk",
+        "content_block_T4NRxA",
+        "content_block_PJi9PR",
+        "content_block_TQV3dh",
+        "content_block_EKJgBA",
+        "content_block_nTyNCb",
+        "content_block_jtWPj4"
+      ],
+      "settings": {
+        "section_padding_top": 0,
+        "section_padding_bottom": 20,
+        "show_share_button": true
+      }
+    },
+    "custom_tab_j6W8Gg": {
+      "type": "custom-tab",
+      "settings": {
+        "show_description": true,
+        "title_description": "Product Info",
+        "show_reviews": false,
+        "title_reviews": "Reviews",
+        "custom_class": "",
+        "custom_id": "",
+        "background_color": "#f3d6da",
+        "padding": "60px 0"
+      }
+    },
+    "custom_wine_section_Bi6rwq": {
+      "type": "custom-wine-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/14_it_Optional_CW3924_GrandiRossi_sgv.jpg",
+        "subheading": "I GRANDI ROSSI",
+        "heading": "Autunno alle porte",
+        "description": "Importanti Denominazioni ed etichette che raccontano una storia, una tradizione e un territorio. Questo mese acquistando dalla selezione puoi guadagnare doppi punti fedeltà!",
+        "button_text": "Scopri di più",
+        "button_link": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Prodotto correlato",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "recently_viewed_products_E8FydX": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "heading": "visualizzazioni recenti",
+        "background_color": "#fffaf3",
+        "padding": "60px 10px"
+      }
+    }
+  },
+  "order": [
+    "breadcrumb_X7r7MD",
+    "main",
+    "product_custom_data_NtBFxX",
+    "custom_tab_j6W8Gg",
+    "custom_wine_section_Bi6rwq",
+    "related-products",
+    "recently_viewed_products_E8FydX"
+  ]
+}

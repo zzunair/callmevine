@@ -1,0 +1,46 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "it"
+  },
+  "sections": {
+    "image_slider_t6WYwd": {
+      "settings": {},
+      "blocks": {
+        "slider_block_LbiAWk": {
+          "settings": {
+            "title": "NON PERDERTI LA NOSTRA SUPER PROMO AUTUNNALE",
+            "button_label": "CLICCA QUI"
+          }
+        },
+        "slider_block_QcxNkk": {
+          "settings": {
+            "button_label": "Registrati ora",
+            "description": "UNISCITI ALLA FAMIGLIA ANGELINI",
+            "title": "DIVENTA PARTNER DEL NOSTRO WINE CLUB"
+          }
+        }
+      }
+    },
+    "banner_images_aQiYqL": {
+      "settings": {
+        "custom_class": "top-banner container"
+      },
+      "blocks": {}
+    },
+    "category_slider_qK7Mbh": {
+      "settings": {
+        "category_title": "Categoria Caldo"
+      },
+      "blocks": {}
+    },
+    "products_collection_slider_r6Jb34": {
+      "settings": {
+        "title": "offerte della settimana",
+        "description": "Esplora la nostra straordinaria selezione",
+        "viewall_text": "Visualizza tutto"
+      },
+      "blocks": {}
+    }
+  }
+}
