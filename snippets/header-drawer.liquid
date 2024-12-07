@@ -1,0 +1,405 @@
+{% comment %}
+  Renders a header drawer menu for mobile and desktop.
+
+  Usage:
+  {% render 'header-drawer' %}
+{% endcomment %}
+
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary
+      class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <span>
+        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <div class="menu-drawer__inner-container">
+        <div class="navbar-mobile-head hide-for-large">
+          <div class="menu-service-item" data-analytic-name="login" style="">
+              <a href="/account/" class="no-hover big js-layer-login">
+                  <div class="label-info" data-analytic-name="login">Login/Register</div>
+              </a>
+              <!-- <a href="/wishlist/" class="navbar-service-label big">
+                
+                My wishlist
+                
+                  <svg class="svg-inline--fa fa-heart fa-w-16 wishlist" aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+              </a> -->
+          </div>
+        </div>
+        <div class="mobile-logged-loyalty-call hide-for-large">
+          <p class="label-info">Hi, <a href="/account/" class="label-link">subscribe</a>
+              to Signorvino Club to immediately get a 10% discount!
+          </p>
+        </div>
+        <div class="menu-drawer__navigation-container">
+          <nav class="menu-drawer__navigation">
+            <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+              {%- for link in section.settings.menu.links -%}
+                <li>
+                  {%- if link.links != blank -%}
+                    <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                      <summary
+                        id="HeaderDrawer-{{ link.handle }}"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
+                      >
+                        {{ link.title | escape }}
+                        <span class="svg-wrapper">
+                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        </span>
+                        <span class="svg-wrapper">
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </span>
+                      </summary>
+                      <div
+                        id="link-{{ link.handle | escape }}"
+                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                        tabindex="-1"
+                      >
+                        <div class="menu-drawer__inner-submenu">
+                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                            <span class="svg-wrapper">
+                              {{- 'icon-arrow.svg' | inline_asset_content -}}
+                            </span>
+                            {{ link.title | escape }}
+                          </button>
+                          
+
+                            {%- if forloop.index == 1 -%}
+                    
+                                          <div class="sub-menu tab-submenu grid-container-full">
+                                            <div class="wrapper-menu content-tab" id="SGV_Wines_Promotions">
+                                                <div class="grid-x align-center">
+                                                    <div class="cell large-12">
+                                                        <div class="submenu-group grid-x" aria-label="Sub menu" role="navigation">
+                                                            <div class="side-asset-wrapper show-for-large">
+                                                                <div data-category-id="SGV_Wines_Promotions" class="promotions-category-left-menu">
+                                                                    <div class="content-left-menu promo-link">
+                                                                        <div class="menu-asset-wrapper promo-asset-wrapper">
+                                                                            <div class="text-container-menu-banner">
+                                                                                <h3 class="title-menu-banner extrabold">CURRENT PROMOTIONS</h3>
+                                                                                <p class="paragraph-menu-banner">More purchases more savings: here you can find
+                                                                                    all the promotions, take advantage of it now!</p>
+                                                                                <a href="/"
+                                                                                    class="action-button-menu-banner small-mobile">Discover all promos</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid-x category-menu__refinement " data-category-id="SGV_Wines_Promotions_Promotions"
+                                                                data-href="#SGV_Wines_Promotions_Promotions">
+                                                                <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                                                    <a href="/" class="promo-links">
+                                                                        <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw7f729b7e/images/drop-down-menu/2024/09_September/01_it_HP_PromoBanner_CW3624_Harvest_2x1_Thematic_sgv.jpg"
+                                                                            class="content-image-menu-categories" loading="lazy" alt="harvest_promo">
+                                                                        <div class="text-container-menu-promo-categories">
+                                                                            <div class="title-and-description-wrapper">
+                                                                                <h4
+                                                                                    class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                                                    GET 2 PAY 1</h4>
+                                                                                <p class="paragraph-menu-promo-categories small">
+                                                                                    Promo 2x1 harvest: buy 2 pieces and pay 1.
+                                                                                </p>
+                                                                            </div>
+                                                                            <p class="link-menu-promo-categories big">Discover the selection</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                                                    <a href="/"
+                                                                        class="promo-links">
+                                                                        <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw1ae732a1/images/drop-down-menu/2023/12_December/01_HP-PromoBanner_CW5223_Refresh_IT.jpg"
+                                                                            class="content-image-menu-categories" loading="lazy" alt="discounts and offers">
+                                                                        <div class="text-container-menu-promo-categories">
+                                                                            <div class="title-and-description-wrapper">
+                                                                                <h4
+                                                                                    class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                                                    DISCOUNTS AND OFFERS</h4>
+                                                                                <p class="paragraph-menu-promo-categories small">
+                                                                                    Unmissable occasions up to 50% discount on selected bottles.
+                                                                                </p>
+                                                                            </div>
+                                                                            <p class="link-menu-promo-categories big">Discover the promotion</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+
+                                                                <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                                                    <a href="/"
+                                                                        class="promo-links">
+                                                                        <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw73cab0a4/images/drop-down-menu/2024/02_February/01_it_PromoBanner_CW0524_WineFestThematic_sgv.jpg"
+                                                                            class="content-image-menu-categories" loading="lazy" alt="quantity_discount">
+                                                                        <div class="text-container-menu-promo-categories">
+                                                                            <div class="title-and-description-wrapper">
+                                                                                <h4
+                                                                                    class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                                                    LOYALTY WINE FEST</h4>
+                                                                                <p class="paragraph-menu-promo-categories small">The more you buy the more you
+                                                                                    save: quantity discounts for Signorvino Club members.</p>
+                                                                            </div>
+                                                                            <p class="link-menu-promo-categories big">Discover the promotion</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                        {%- else -%}
+
+                                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                            {%- for childlink in link.links -%}
+                              <li>
+                                {%- if childlink.links == blank -%}
+                                  <a
+                                    id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                    href="{{ childlink.url }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item 1212 focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if childlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ childlink.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <details id="Details-menu-drawer-{{ link.handle }}-{{ childlink.handle }}">
+                                    <summary
+                                      id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                      class="menu-drawer__menu-item link link--text list-menu__item 32 focus-inset"
+                                    >
+                                      {{ childlink.title | escape }}
+                                      <span class="svg-wrapper">
+                                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                                      </span>
+                                      <span class="svg-wrapper">
+                                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                                      </span>
+                                    </summary>
+                                    <div
+                                      id="childlink-{{ childlink.handle | escape }}"
+                                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                    >
+                                      <button
+                                        class="menu-drawer__close-button link link--text focus-inset"
+                                        aria-expanded="true"
+                                      >
+                                        <span class="svg-wrapper">
+                                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                                        </span>
+                                        {{ childlink.title | escape }}
+                                      </button>
+                                      <ul
+                                        class="menu-drawer__menu list-menu"
+                                        role="list"
+                                        tabindex="-1"
+                                      >
+                                        {%- for grandchildlink in childlink.links -%}
+                                          <li>
+                                            <a
+                                              id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                              href="{{ grandchildlink.url }}"
+                                              class="menu-drawer__menu-item link link--text list-menu__item 55 focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                              {% if grandchildlink.current %}
+                                                aria-current="page"
+                                              {% endif %}
+                                            >
+                                              {{ grandchildlink.title | escape }}
+                                            </a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </div>
+                                  </details>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+
+
+                          </ul>
+                          {% endif %}
+                        </div>
+                      </div>
+                    </details>
+                  {%- else -%}
+                    <a
+                      id="HeaderDrawer-{{ link.handle }}"
+                      href="{{ link.url }}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+          <div class="menu-drawer__utility-links">
+            {%- if shop.customer_accounts_enabled -%}
+              <a
+                href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
+              >
+                {%- if section.settings.enable_customer_avatar -%}
+                  <account-icon>
+                    {%- if customer and customer.has_avatar? -%}
+                      {{ customer | avatar }}
+                    {%- else -%}
+                      <span class="svg-wrapper">
+                        {{- 'icon-account.svg' | inline_asset_content -}}
+                      </span>
+                    {%- endif -%}
+                  </account-icon>
+                {%- else -%}
+                  <span class="svg-wrapper">
+                    {{- 'icon-account.svg' | inline_asset_content -}}
+                  </span>
+                {%- endif -%}
+                {%- liquid
+                  if customer
+                    echo 'customer.account_fallback' | t
+                  else
+                    echo 'customer.log_in' | t
+                  endif
+                -%}
+              </a>
+            {%- endif -%}
+            {%- if localization.available_countries or localization.available_languages -%}
+              <div class="menu-drawer__localization header-localization">
+                {%- if localization.available_countries and localization.available_countries.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+                      <div>
+                        <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
+                          {{ 'localization.country_label' | t }}
+                        </h2>
+                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {% endif %}
+
+                {%- if localization.available_languages and localization.available_languages.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                      <div>
+                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                          {{ 'localization.language_label' | t }}
+                        </h2>
+                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            <ul class="list list-social list-unstyled" role="list">
+              {%- if settings.social_twitter_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-twitter.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_facebook_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-facebook.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_pinterest_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-pinterest.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_instagram_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-instagram.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tiktok_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-tiktok.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tumblr_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-tumblr.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_snapchat_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-snapchat.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_youtube_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-youtube.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_vimeo_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-vimeo.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

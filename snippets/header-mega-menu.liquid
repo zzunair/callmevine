@@ -1,0 +1,220 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      <li>
+        {%- if link.links != blank -%}
+          <header-menu>
+              <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu" >
+                <summary
+                  id="HeaderMenu-{{ link.handle }}"
+                  class="header__menu-item list-menu__item link focus-inset"
+                >
+                  <span
+                    {%- if link.child_active %}
+                      class="header__active-menu-item"
+                    {% endif %}
+                  >
+                    {{- link.title | escape -}}
+                  </span>
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </summary>
+                <div
+                  id="MegaMenu-Content-{{ forloop.index }}"
+                  class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                  tabindex="-1"
+                >
+                  {%- if forloop.index == 1 -%}
+                    
+                    <div class="sub-menu tab-submenu grid-container-full">
+                      <div class="wrapper-menu content-tab" id="SGV_Wines_Promotions">
+                          <div class="grid-x align-center">
+                              <div class="cell large-12">
+                                  <div class="submenu-group grid-x" aria-label="Sub menu" role="navigation">
+                                      <div class="side-asset-wrapper show-for-large">
+                                          <div data-category-id="SGV_Wines_Promotions" class="promotions-category-left-menu">
+                                              <div class="content-left-menu promo-link">
+                                                  <div class="menu-asset-wrapper promo-asset-wrapper">
+                                                      <div class="text-container-menu-banner">
+                                                          <h3 class="title-menu-banner extrabold">CURRENT PROMOTIONS</h3>
+                                                          <p class="paragraph-menu-banner">More purchases more savings: here you can find
+                                                              all the promotions, take advantage of it now!</p>
+                                                          <a href="/"
+                                                              class="action-button-menu-banner small-mobile">Discover all promos</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="grid-x category-menu__refinement " data-category-id="SGV_Wines_Promotions_Promotions"
+                                          data-href="#SGV_Wines_Promotions_Promotions">
+                                          <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                              <a href="/" class="promo-links">
+                                                  <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw7f729b7e/images/drop-down-menu/2024/09_September/01_it_HP_PromoBanner_CW3624_Harvest_2x1_Thematic_sgv.jpg"
+                                                      class="content-image-menu-categories" loading="lazy" alt="harvest_promo">
+                                                  <div class="text-container-menu-promo-categories">
+                                                      <div class="title-and-description-wrapper">
+                                                          <h4
+                                                              class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                              GET 2 PAY 1</h4>
+                                                          <p class="paragraph-menu-promo-categories small">
+                                                              Promo 2x1 harvest: buy 2 pieces and pay 1.
+                                                          </p>
+                                                      </div>
+                                                      <p class="link-menu-promo-categories big">Discover the selection</p>
+                                                  </div>
+                                              </a>
+                                          </div>
+
+                                          <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                              <a href="/"
+                                                  class="promo-links">
+                                                  <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw1ae732a1/images/drop-down-menu/2023/12_December/01_HP-PromoBanner_CW5223_Refresh_IT.jpg"
+                                                      class="content-image-menu-categories" loading="lazy" alt="discounts and offers">
+                                                  <div class="text-container-menu-promo-categories">
+                                                      <div class="title-and-description-wrapper">
+                                                          <h4
+                                                              class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                              DISCOUNTS AND OFFERS</h4>
+                                                          <p class="paragraph-menu-promo-categories small">
+                                                              Unmissable occasions up to 50% discount on selected bottles.
+                                                          </p>
+                                                      </div>
+                                                      <p class="link-menu-promo-categories big">Discover the promotion</p>
+                                                  </div>
+                                              </a>
+                                          </div>
+
+                                          <div class="content-promo-categories promo-link cell large-3 category-menu__refinement-wrapper">
+                                              <a href="/"
+                                                  class="promo-links">
+                                                  <img src="https://www.signorvino.com/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw73cab0a4/images/drop-down-menu/2024/02_February/01_it_PromoBanner_CW0524_WineFestThematic_sgv.jpg"
+                                                      class="content-image-menu-categories" loading="lazy" alt="quantity_discount">
+                                                  <div class="text-container-menu-promo-categories">
+                                                      <div class="title-and-description-wrapper">
+                                                          <h4
+                                                              class="uppercase title-promo-categories hide-for-small-only hide-for-medium-only extrabold">
+                                                              LOYALTY WINE FEST</h4>
+                                                          <p class="paragraph-menu-promo-categories small">The more you buy the more you
+                                                              save: quantity discounts for Signorvino Club members.</p>
+                                                      </div>
+                                                      <p class="link-menu-promo-categories big">Discover the promotion</p>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                
+                  {%- else -%}
+
+                  {%- if forloop.index == 3 -%}
+                  <div class="sub-menu tab-submenu grid-container-full">
+                      <div class="wrapper-menu content-tab" id="SGV_Wines_Promotions">
+                          <div class="grid-x align-center">
+                              <div class="cell large-12">
+                                  <div class="submenu-group grid-x" aria-label="Sub menu" role="navigation">
+                                    <div class="menu-asset-wrapper tutti-vini-asset-wrapper">
+                                      <div class="text-container-menu-banner">
+                                        <p class="h3 title-menu-banner extrabold">ALL THE WINERIES</p>
+                                        <p class="paragraph-menu-banner big">Maison and vignerons telling a story.</p> <a href="/" class="action-button-menu-banner">Discover the wineries</a> 
+                                      </div>
+                                    </div>
+                  {% endif %}
+
+                  <div class="grid-x category-menu__refinement ">
+                  <ul
+                    class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                    role="list"
+                  >
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a
+                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  </div>
+                {% endif %}
+                </div>
+                {%- if forloop.index == 3 -%}
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  </div>  
+                {% endif %}
+
+              </details> 
+          </header-menu>
+        {%- else -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {{- link.title | escape -}}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+<script>
+$(document).ready(function() {
+  $('.list-menu.list-menu--inline li header-menu').hover(
+    function() {
+      $(this).find('details').attr('open', 'open');
+    },
+    function() {
+      $(this).find('details').removeAttr('open');
+    }
+  );
+});
+</script>

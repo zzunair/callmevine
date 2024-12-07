@@ -1,0 +1,133 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "custom_liquid_MkMFa3": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!DOCTYPE html>\n<html lang=\"it\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Newsletter Section<\/title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n<\/head>\n<body>\n    <footer class=\"footer-banner-image-text-newsletter-section\">\n        <div class=\"footer-banner-image-text-container\">\n            <div class=\"footer-banner-image-text-social-follow\">\n                <h4>SEGUICI<\/h4>\n                <div class=\"footer-banner-image-text-social-icons\">\n                    <a href=\"#\"><img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwdb4b5bcd\/images\/footer\/facebook.svg\" alt=\"Facebook\"><\/a>\n                    <a href=\"#\"><img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw7a938b3d\/images\/footer\/youtube.svg\" alt=\"YouTube\"><\/a>\n                    <a href=\"#\"><img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwb45a5b24\/images\/footer\/tiktok.svg\" alt=\"TikTok\"><\/a>\n                    <a href=\"#\"><img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw9e76fe39\/images\/footer\/instagram.svg\" alt=\"Instagram\"><\/a>\n                <\/div>\n            <\/div>\n            <div class=\"footer-banner-image-text-newsletter-signup\">\n                <h4>RESTA AGGIORNATO<\/h4>\n                <p>Iscriviti alla nostra newsletter per non perderti le promozioni del mese, i nuovi arrivi ed eventi esclusivi!<\/p>\n                <form class=\"footer-banner-image-text-signup-form\">\n                    <input type=\"email\" placeholder=\"Indirizzo Email*\" required>\n                    <button type=\"submit\">→<\/button>\n                <\/form>\n            <\/div>\n        <\/div>\n    <\/footer>\n<\/body>\n<\/html>\n<style>\n\n\n.footer-banner-image-text-newsletter-section {\n    background-color: #1E6159; \/* Dark teal color *\/\n    padding: 40px;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n}\n\n.footer-banner-image-text-container {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    max-width: 1200px;\n    margin: 0 auto;\n    width: 100%;\n}\n\n.footer-banner-image-text-social-follow {\n    text-align: left;\n}\n\n.footer-banner-image-text-social-follow h4 {\n    margin-bottom: 10px;\n    font-size: 16px;\n    font-weight: bold;\n}\n\n.footer-banner-image-text-social-icons a {\n    margin-right: 15px;\n    display: inline-block;\n}\n\n.footer-banner-image-text-social-icons img {\n    width: 24px;\n    height: 24px;\n}\n\n.footer-banner-image-text-newsletter-signup {\n    text-align: left;\n}\n\n.footer-banner-image-text-newsletter-signup h4 {\n    font-size: 18px;\n    font-weight: bold;\n    margin-bottom: 10px;\n}\n\n.footer-banner-image-text-newsletter-signup p {\n    margin-bottom: 15px;\n    font-size: 14px;\n    line-height: 1.5;\n}\n\n.footer-banner-image-text-signup-form {\n    display: flex;\n    align-items: center;\n}\n\n.footer-banner-image-text-signup-form input[type=\"email\"] {\n    padding: 10px;\n    font-size: 14px;\n    border: none;\n    border-radius: 4px;\n    margin-right: 10px;\n    width: 250px;\n}\n\n.footer-banner-image-text-signup-form button {\n    padding: 10px 15px;\n    background-color: white;\n    color: #1E6159;\n    border: none;\n    font-size: 16px;\n    border-radius: 4px;\n    cursor: pointer;\n}\n\n.footer-banner-image-text-signup-form button:hover {\n    background-color: #ddd;\n}\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "STAY UPDATED",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up for our newsletter so you don’t miss the monthly promotions, new arrivals and exclusive events.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_zVieBa": {
+          "type": "link_list",
+          "settings": {
+            "heading": "CUSTOMER SERVICE",
+            "menu": "customer-service"
+          }
+        },
+        "link_list_NEXpDW": {
+          "type": "link_list",
+          "settings": {
+            "heading": "DO YOU NEED HELP?",
+            "menu": "do-you-need-help"
+          }
+        },
+        "link_list_PYPEyd": {
+          "type": "link_list",
+          "settings": {
+            "heading": "COMPANY",
+            "menu": "company"
+          }
+        },
+        "link_list_fjKHnM": {
+          "type": "link_list",
+          "settings": {
+            "heading": "LEGAL AREA",
+            "menu": "legal-area"
+          }
+        },
+        "html_H6CMyt": {
+          "type": "html",
+          "settings": {
+            "custom_html": "<div class=\"signorvino-club-and-gift-card\">\n    <div class=\"block\">\n        <img class=\"icon\" src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw23766825\/images\/footer\/gift.svg\" alt=\"gift\" width=\"15\" height=\"15\">\n        <span class=\"footer-links-title color-primary\">Gift Card<\/span>\n        <a href=\"#\" class=\"analytic-footer-icon-text\">Find out more<\/a>\n    <\/div>\n    <div class=\"block\">\n        <img class=\"icon\" src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw6385276f\/images\/footer\/signorvino-club.svg\" alt=\"Signorvino Club\" width=\"15\" height=\"15\">\n        <span class=\"footer-links-title color-expert\">Signorvino Club<\/span>\n        <a href=\"#\" class=\"analytic-footer-icon-text\">Find out more<\/a>\n    <\/div>\n<\/div>"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_zVieBa",
+        "link_list_NEXpDW",
+        "link_list_PYPEyd",
+        "link_list_fjKHnM",
+        "html_H6CMyt"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 44,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_np69GD": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".custom-text-footer-container {max-width: 1179px; margin: auto;}",
+        ".payment-methods {text-align: right;}",
+        "p.footer-legal {font-size: 9px; color: #000; font-weight: 400; text-align: center;}",
+        ".footer-bottom {display: flex; justify-content: space-between; align-items: center;}",
+        ".custom-text-footer-container + hr {margin: 5px 0; background: #f0f0f0;}",
+        ".payment-methods {display: flex; flex-wrap: wrap; justify-content: center; gap: 17px;}",
+        ".footer-language {display: flex; justify-content: space-between; width: 20%; color: #000; font-size: 14px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"custom-text-footer-container\">\n    <div class=\"footer-bottom\">\n       \n        <p class=\"footer-legal\">\n            © Callmewine 2021, tutti i diritti riservati. CALLMEWINE S.R.L., Via Natale Battaglia 8, 20127 Milano (IT), Capitale Sociale 13.523,81 euro (IV), CF\/P.IVA 07130650968, Cam. Com. MI REA 1937916 - Società soggetta a direzione e coordinamento di Italmobiliare S.p.A., C.F. 00796400158 -\n        <\/p>\n    <\/div>\n<\/div>\n<hr>\n<div class=\"custom-text-footer-container\">\n    <div class=\"payment-methods\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw55531a1d\/images\/footer\/paypal.svg\" alt=\"PayPal\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwe143dbcd\/images\/footer\/master.svg\" alt=\"MasterCard\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwffdb1537\/images\/footer\/visa.svg\" alt=\"Visa\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw06fd5b39\/images\/footer\/sofort.svg\" alt=\"Sofort\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dwda231d70\/images\/footer\/contrassegno.svg\" alt=\"MasterCard\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw4ed2f73c\/images\/footer\/applepay.svg\" alt=\"Apple Pay\">\n        <img src=\"https:\/\/www.signorvino.com\/on\/demandware.static\/-\/Library-Sites-SignorvinoContentLibrary\/default\/dw7d707d75\/images\/footer\/klarna.svg\" alt=\"Klarna\">\n    <\/div>\n<\/div>",
+        "color_scheme": "scheme-2",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_MkMFa3",
+    "newsletter",
+    "footer",
+    "custom_liquid_np69GD"
+  ]
+}

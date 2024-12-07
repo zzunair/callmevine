@@ -1,0 +1,70 @@
+<div class="faq-sections container">
+  <h2 class="h4 section__heading mb-12 text-start">{{ section.settings.section_title }}</h2>
+  <div id="{{ section.settings.section_id | default: 'faq-section' }}" class="faq-section {{ section.settings.custom_class }}">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        <details class="faq-item" id="faq-{{ block.id }}">
+          <summary class="faq-title">
+            <span>{{ block.settings.faq_title }}</span>
+            <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+          </summary>
+          <p class="faq-description">{{ block.settings.faq_description }}</p>
+        </details>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "FAQ Section",
+    "tag": "section",
+    "class": "faq-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+      },
+      {
+        "type": "text",
+        "id": "section_id",
+        "label": "Section ID",
+        "default": "faq-section"
+      },
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom CSS Class",
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq_item",
+        "name": "FAQ Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq_title",
+            "label": "Question Title",
+            "default": "FAQ Question"
+          },
+          {
+            "type": "textarea",
+            "id": "faq_description",
+            "label": "Answer Description",
+            "default": "FAQ answer description goes here."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Section",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

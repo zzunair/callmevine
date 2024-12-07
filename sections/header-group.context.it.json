@@ -1,0 +1,24 @@
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "it"
+  },
+  "sections": {
+    "header": {
+      "settings": {
+        "left_text": "Spedizioni regolarmente garantite e gratuite sopra 99€"
+      },
+      "blocks": {}
+    },
+    "announcement-bar": {
+      "settings": {},
+      "blocks": {
+        "announcement_XeWNTw": {
+          "settings": {
+            "text": "Benvenuti nel nostro negozio"
+          }
+        }
+      }
+    }
+  }
+}

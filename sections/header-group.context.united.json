@@ -1,0 +1,14 @@
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "united"
+  },
+  "sections": {
+    "header": {
+      "settings": {
+        "left_text": "Regularly guaranteed and free shipping over €99"
+      },
+      "blocks": {}
+    }
+  }
+}

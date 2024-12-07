@@ -1,0 +1,81 @@
+<!-- sections/breadcrumb.liquid -->
+{% schema %}
+{
+  "name": "Breadcrumb",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Breadcrumb Section"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Id",
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Wrapper Padding",
+      "default": "0 0 0 0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Breadcrumb",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign custom_class = section.settings.custom_class %}
+{% assign custom_id = section.settings.custom_id %}
+{% assign background_color = section.settings.background_color %}
+{% assign padding = section.settings.padding %}
+
+<nav 
+  class="breadcrumb {{ custom_class }}" 
+  id="{{ custom_id }}" 
+  style="background-color: {{ background_color }}; padding: {{ padding }};" 
+  aria-label="Breadcrumb"
+>
+  <div class="container">
+<ul class="breadcrumb-list">
+  <li><a href="{{ shop.url }}">Home</a></li>
+
+  {% if template contains 'collection' %}
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li><a href="/collections">Collections</a></li>
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li>{{ collection.title }}</li>
+  {% elsif template contains 'product' %}
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li>
+      <a href="/collections">Collections</a>
+    </li> 
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li>{{ product.title }}</li>
+  {% elsif template contains 'blog' %}
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li><a href="/blogs">Blog</a></li>
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li>{{ article.title }}</li>
+  {% elsif template contains 'page' %}
+    <svg class="icon icon-caret" viewBox="0 0 10 6"><path fill="currentColor" fill-rule="evenodd" d="M9.354.646a.5.5 0 0 0-.708 0L5 4.293 1.354.646a.5.5 0 0 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0 0-.708" clip-rule="evenodd"></path></svg>
+    <li>{{ page_title }}</li>
+  {% endif %}
+</ul>
+
+    </div>
+</nav>

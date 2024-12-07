@@ -1,0 +1,121 @@
+{% schema %}
+{
+  "name": "Trend Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "vine_trend_image",
+      "label": "Upload Trend Image",
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class",
+    },
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "VINI BIOLOGICI"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link",
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button Style",
+          "options": [
+            { "value": "red", "label": "#991547" },
+            { "value": "white", "label": "White" }
+          ],
+          "default": "red"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trend Section",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "button",
+          "settings": {
+            "button_text": "VINI BIOLOGICI",
+            "button_link": "#",
+            "button_style": "red"
+          }
+        },
+        {
+          "type": "button",
+          "settings": {
+            "button_text": "LOYALTY",
+            "button_link": "#",
+            "button_style": "white"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+<div class="trend-section-main-trend-section style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="{{ section.settings.custom_class }}" >
+    <img class="vine-trend-img" src="{{ section.settings.vine_trend_image | img_url: 'master' }}" alt="Vine Trend">
+    
+    <div class="grid-container">
+        <div class="trend-section-main-trend-content">
+
+            <h2>{{ section.settings.title }}</h2>
+            <p class="block-description big">{{ section.settings.description }}</p>
+            
+            <div class="trend-section-main-trend-section-main-buttons">
+                {% for block in section.blocks %}
+                <a href="{{ block.settings.button_link }}" class="trend-section-main-button {{ block.settings.button_style }}">
+                    {{ block.settings.button_text }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

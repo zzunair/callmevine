@@ -1,0 +1,116 @@
+<section class="quick-info {{ section.settings.custom_class }}" {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}" {% endif %}
+    style="background-color: {{ section.settings.background_color }};padding: {{ section.settings.padding }};">
+ <div class="container">
+   <div class="quick-info-wrap">
+    {% for block in section.blocks %}
+      <div class="info-item" >
+        <div class="info-item--wrap" >
+            <div class="content" >
+                {% if block.settings.title != blank  %}
+                  <h3>{{ block.settings.title }}</h3>
+                {% endif %}
+                {% if block.settings.description != blank  %}
+                  <p>{{ block.settings.description }}</p>
+                {% endif %}
+                {% if block.settings.button_label != blank  %}
+                  <a href="{{ block.settings.button_link }}" class="btn-more">{{ block.settings.button_label }} 
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="M20 8.5 12.5 16 5 8.5" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></a>
+              {% endif %}
+            </div>
+            <div class="thumb" >
+              {% if block.settings.image != blank  %}
+                  <img src="{{ block.settings.image | img_url: 'original' }}" alt="{{ block.settings.title }}" width="100" height="100">
+              {% endif %}
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Image Box",
+  "tag": "section",
+  "class": "image-box",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image Box Section"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Id",
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Wrapper Padding",
+      "default": "0 0 0 0"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Box",
+      "blocks": [
+        {
+          "type": "image_block",
+          "settings": {
+            "title": "Sample Title",
+            "description": "Sample description for this media block.",
+            "button_label": "Learn More",
+            "button_link": "https://your-link.com"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

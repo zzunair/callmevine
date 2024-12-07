@@ -1,0 +1,171 @@
+<section class="custom-category-section {{ section.settings.custom_class }}">
+  {% if section.settings.category_title %}
+      <h2 class="jes-title">{{ section.settings.category_title}}</h2>
+  {% endif %}
+  <div class="custom-category-grid category-slider">
+    {% for block in section.blocks %}
+      {% assign collection = collections[block.settings.collection] %}
+      {% if collection %}
+         <div class="carousel-cell">
+        <div class="category-item">
+          <a href="{{ collection.url }}">
+            {% if collection.metafields.custom.banner %}
+              <div class="category-box">
+                <img src="{{ collection.metafields.custom.banner | img_url: '500x500' }}" alt="{{ collection.title }}">
+              </div>
+            {% endif %}
+            <h3>{{ collection.title }}</h3>
+          </a>
+        </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.custom-category-section {
+  width: 100%;
+  padding: 20px 0 30px 0;
+}
+
+.custom-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.category-item h3 {
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+    border: 0;
+    font-weight: 600;
+    margin: 24px 0;
+    transition: .5s all;
+    margin-bottom: 0;
+}
+.custom-category-section img {
+    height: 120px !important;
+    width: auto;
+    margin: auto;
+    object-fit: cover;
+}
+.category-box {
+    position: relative;
+    padding: 10px 0 0;
+}
+
+.category-box:after {
+    content: " ";
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    background: #E9E9E9;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 100px;
+}
+.category-item a {
+    text-decoration: none;
+    color: #000;
+}
+.category-item:hover img {
+    scale: 1.1;
+}
+.category-item img {
+    transition: .5s all;
+}
+.category-item:hover h3 {
+    color: #991547;
+    font-weight: 700;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Custom Category Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "category_title",
+      "label": "Title",
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Grid",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+// $(document).ready(function(){ 
+    jQuery('.category-slider').slick({
+        dots: true,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        slidesToShow: 6, // Default is 5 slides for desktop
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        infinite: true,
+        dots: false,
+        // Uncomment these lines if you want custom navigation arrows:
+        // prevArrow: '<button type="button" class="slick-prev img-slider-btn"><img src="https://cdn.shopify.com/s/files/1/0665/3850/4350/files/arrow-right-red.png?v=1726723450" style="transform: rotate(180deg);"/></button>',
+        // nextArrow: '<button type="button" class="slick-next img-slider-btn"><img src="https://cdn.shopify.com/s/files/1/0665/3850/4350/files/arrow-right-red.png?v=1726723450" /></button>',
+
+        responsive: [
+            {
+                breakpoint: 1024, // Tablet and smaller screens
+                settings: {
+                    slidesToShow: 3, // Show 3 slides on tablet
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768, // Mobile screens
+                settings: {
+                    slidesToShow: 2, // Show 2 slides on mobile
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+// });
+</script> 

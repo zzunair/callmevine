@@ -1,0 +1,108 @@
+{% schema %}
+{
+  "name": "Hero Slider",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+<div class="hero-banner-full">
+    <div class="hero-banner-slider"> 
+        <div class="carousel-cell">
+            <div class="hero-slide">
+                <a href="/" class="no-hover">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dwa6dbe452/Hero banner/2024/09_September/01_it_Hero01_CW3624_Harvest_2x1_Thematic_sgv.jpg" class="hero-image-desktop" loading="lazy" alt="harvest promo  for 1">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw3b6df477/Hero banner/2024/09_September/01_it_Hero01_CW3624_Harvest_2x1_Thematic_m_sgv.jpg" class="hero-image-mobile" loading="lazy" alt="harvest promo  for 1">
+                </a>
+                <div class="slider-center-content text-box-left">
+                    <p class="h1 extrabold title-homepage">HARVEST 2X1</p>
+                    <p class="text-white big title-homepage">Buy 2 pieces and pay 1</p>
+                    <a href="/" class="button hollow wide">Discover the selection</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-cell">
+            <div class="hero-slide">
+                <a href="/" class="no-hover">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dwc4c6ae19/Hero banner/2024/09_September/01_it_Hero02_CW3624_Harvest_2x1_Thematic_sgv.jpg" class="hero-image-desktop" loading="lazy" alt="best sellers">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw21aa97f3/Hero banner/2024/09_September/01_it_Hero02_CW3624_Harvest_2x1_Thematic_m_sgv.jpg" class="hero-image-mobile" loading="lazy" alt="best sellers">
+                </a>
+                <div class="slider-center-content text-box-left">
+                    <p class="h1 extrabold title-homepage">THE BEST SELLERS</p>
+                    <p class="text-white big title-homepage">The most drunk labels</p>
+                    <a href="/" class="button hollow wide">Start from here</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-cell">
+            <div class="hero-slide">
+                <a href="/" class="no-hover">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dw75941f7e/Hero banner/2024/09_September/01_it_Hero03_CW3624_Harvest_2x1_Thematic_sgv.jpg" class="hero-image-desktop" loading="lazy" alt="wineries">
+                    <img src="https://www.signorvino.com/dw/image/v2/BLCF_PRD/on/demandware.static/-/Library-Sites-SignorvinoContentLibrary/default/dwa01261b0/Hero banner/2024/09_September/01_it_Hero03_CW3624_Harvest_2x1_Thematic_m_sgv.jpg" class="hero-image-mobile" loading="lazy" alt="wineries">
+                </a>
+                <div class="slider-center-content text-box-left">
+                    <p class="h1 extrabold title-homepage">WINERIES AND PRODUCERS</p>
+                    <p class="text-white big title-homepage">Discover all the wineries in the catalogue</p>
+                    <a href="/" class="button hollow wide">Show more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+<script>
+$(document).ready(function(){
+    $('.hero-banner-slider').slick({
+        dots: true,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: true,
+        dots: false,
+    });
+});
+</script> 
+
+
+
+
+
+  
+  <style>
+      .hero-banner-full {
+          width: 100%;
+          position: relative;
+      }
+      .hero-banner-slider {
+          position: relative;
+      }
+      .hero-slide {
+          text-align: center;
+      }
+      .hero-image-desktop, .hero-image-mobile {
+          width: 100%;
+          height: auto;
+      }
+      .slick-dots {
+          bottom: 10px;
+      }
+      .hero-banner-full img.hero-image-mobile {
+          display: none;
+      }
+      @media screen and (max-width: 37.5em) {
+        .hero-banner-full img.hero-image-mobile {
+            display: initial;
+        }
+        .hero-banner-full .hero-image-desktop {
+            display: none;
+        }
+    }
+  </style> 

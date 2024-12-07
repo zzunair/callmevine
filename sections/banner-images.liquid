@@ -1,0 +1,70 @@
+{% schema %}
+{
+  "name": "Banner Images",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class",
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID",
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Banner Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Upload Image"
+        },
+        {
+          "type": "text",
+          "id": "image_link",
+          "label": "Image Link",
+          "default": "#" // Set default link to a placeholder
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Images",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="banner-images {{ section.settings.custom_class }}" id="{{ section.settings.custom_id }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  {% for block in section.blocks %}
+    <div class="banner-images__item">
+      <a href="{{ block.settings.image_link }}" target="_blank">
+        <img src="{{ block.settings.image | img_url: '2048x2048' }}" alt="{{ block.settings.image | alt }}" class="banner-images__img">
+      </a>
+    </div>
+  {% endfor %}
+</div>

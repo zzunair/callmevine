@@ -1,0 +1,226 @@
+{% assign slider_id = section.settings.slider_id %}
+{% if slider_id == blank %}
+  {% assign slider_id = 'slick-slider' %}
+{% endif %}
+
+<section class="organic-wine-section-box products_sliders {{ section.settings.custom_class }} new-product" id="{{ section.settings.custom_id }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+  <div class="container">
+  <div class="grid-container {% if section.settings.viewall == true %}right-side-box{% endif %}">
+  {% if  section.settings.viewall == true %}
+    <div class="organic-wine-section-promo-banner">
+        <div class="inner-container">
+          {% if section.settings.category_icon != blank %}
+            <img src="{{ section.settings.category_icon | img_url: 'medium' }}" height="100px" width="100px" alt="category-icon" class="category-icon" />
+          {% endif %}
+          {% if section.settings.custom_image != blank %}
+            <img src="{{ section.settings.custom_image | img_url: 'medium' }}" height="100px" width="100px" alt="Banner Image" class="banner_image" />
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2 class="title{% if section.settings.title == blank %} title--no-heading{% endif %}">{{ section.settings.title | escape }}</h2>
+          {% endif %}
+          {% if section.settings.description != blank %}
+            <p>{{ section.settings.description }}</p>
+          {% endif %}
+          <a href="{{ section.viewall_link.collection }}" class="organic-wine-section-promo-link">{{ section.settings.viewall_text}}</a>
+        </div>
+    </div>
+  {% endif %}
+    <div class="collection custom-product-slider">
+      <div class="dawn-product-slider {% if section.settings.navigation_amount %} item-view-{{section.settings.navigation_amount}} {% endif %}">
+         <div class="{{ slider_id }}">
+            {% for product in section.settings.collection.products limit: section.settings.products_to_show %}
+              <div class="carousel-cell">
+                    <div class="product__card">
+                        {% render 'card-product', 
+                          card_product: product, quick_add: true, quick_add: 'standard' , 
+                          show_vendor: true, show_rating: true,
+                          media_aspect_ratio: 'square',
+                          extend_height: true,
+                        %}
+
+
+                    </div>
+              </div>
+            {% endfor %}
+         </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+{% assign nav_range = section.settings.navigation_amount %}
+{% schema %}
+{
+  "name": "Products slider",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "viewall",
+      "label": "Show Button"
+    },
+   {
+      "type": "text",
+      "id": "title",
+      "default": "Featured Products slider",
+      "label": "Featured Products slider"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "This is a description of the products slider.",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "viewall_text",
+      "label": "Button Text",
+    },
+    {
+      "type": "text",
+      "id": "viewall_link",
+      "label": "Button Link",
+    },
+    {
+      "type": "image_picker",
+      "id": "category_icon",
+      "label": "Upload Category icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Upload Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "slider_id",
+      "label": "Slider Id",
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Products To Show"
+    },
+    {
+      "type": "range",
+      "id": "navigation_amount",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Change the number of cards in view"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class",
+      "default": "add here"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Id",
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 20
+    },
+  ],
+  "presets": [
+    {
+      "name": "Products collection slider",
+      "category":"Custom"
+    }
+  ]
+}
+{% endschema %}
+
+
+{% assign nav_range = section.settings.navigation_amount %}
+
+{% if nav_range == 3 %}
+  {% assign view_desktop = 3 %}
+  {% assign view_tab = 2 %}
+  {% assign view_tab_sm = 2 %}
+  {% assign view_mobile = 2 %}
+  {% assign view_small = 2 %}
+{% elsif nav_range == 4 %}
+  {% assign view_desktop = 4 %}
+  {% assign view_tab = 3 %}
+  {% assign view_tab_sm = 2 %}
+  {% assign view_mobile = 2 %}
+  {% assign view_small = 2 %}
+{% endif %}
+
+                       
+<script> 
+  $('.{{ slider_id }}').slick({
+    slidesToShow: {{view_desktop}},
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
+    dots: false,
+        prevArrow: '<button type="button" class="slick-prev custom-prev"><img src="https://cdn.shopify.com/s/files/1/0665/3850/4350/files/arrow-right-red.png?v=1726723450" style="transform: rotate(180deg);"></button>',  // Custom previous arrow (rotated 180 degrees)
+    nextArrow: '<button type="button" class="slick-next custom-next"><img src="https://cdn.shopify.com/s/files/1/0665/3850/4350/files/arrow-right-red.png?v=1726723450"></button>',  // Custom next arrow
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: {{view_tab}},
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 867,
+        settings: {
+          slidesToShow: {{view_tab_sm}},
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: {{view_mobile}},
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: {{view_small}},
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }); 
+</script>
+
+

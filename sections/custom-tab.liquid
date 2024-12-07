@@ -1,0 +1,154 @@
+<section class="custom-info-tab {{ section.settings.custom_class }}" {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}" {% endif %}
+    style="background-color: {{ section.settings.background_color }};padding: {{ section.settings.padding }};">
+  <div class="container">
+    <div class="custom-tab-btn">
+      <ul>
+		{% if  section.settings.show_description == true %}
+	      	<li>
+	          <a href="#{{ section.settings.title_description | downcase | replace: ' ', '-' }}-tab">{{ section.settings.title_description }}</a>
+	        </li>
+	    {% endif %}
+
+        {% for block in section.blocks %}
+          {% if block.settings.description != blank %}
+          {% if block.settings.title != blank %}
+            <li>
+              <a href="#{{ block.settings.title | downcase | replace: ' ', '-' }}-tab">{{ block.settings.title }}</a>
+            </li>
+          {% endif %}
+          {% endif %}
+        {% endfor %}
+
+
+        {% if  section.settings.show_reviews == true %}
+	      	<li>
+	          <a href="#reviews-tab">{{ section.settings.title_reviews }}</a>
+	        </li>
+	    {% endif %}
+      </ul>
+    </div>
+
+    <div class="custom-tab-container">
+      <ul>
+
+      	{% if  section.settings.show_description == true %}
+	      	<li class="tab-content-item" id="{{ section.settings.title_description | downcase | replace: ' ', '-' }}">
+	        	<h3 class="tab-title">{{ section.settings.title_description }}</h3>
+				<div class="product-info">
+				  {{ product.description }}
+				</div>
+	        </li>
+	    {% endif %}
+
+ 
+        {% for block in section.blocks %}
+          {% if block.settings.title != blank %}
+            {% if block.settings.description != blank %}
+            <li class="tab-content-item" id="{{ block.settings.title | downcase | replace: ' ', '-' }}-tab">
+            	<h3 class="tab-title">{{ block.settings.title }}</h3>
+	              {% if block.settings.description != blank %}
+  	              <div class="product-info">
+  	                {{ block.settings.description }}
+  	            </div>
+	              {% endif %}
+            </li>
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% if  section.settings.show_reviews == true %}
+	      	<li class="tab-content-item" id="reviews-tab">
+	      		<h3 class="tab-title">{{ section.settings.title_reviews }}</h3>
+	      	</li>
+	    {% endif %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Tab",
+  "tag": "section",
+  "class": "custom_tab",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Custom Tab Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show Description"
+    },
+    {
+      "type": "text",
+      "id": "title_description",
+      "label": "Description"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show Reviews"
+    },
+    {
+      "type": "text",
+      "id": "title_reviews",
+      "label": "Reviews"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom Id"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Wrapper Padding",
+      "default": "0 0 0 0"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_tab",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Tab",
+      "blocks": [
+        {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Title",
+            "description": "<p>Description.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,59 @@
+<!-- custom-wine-section.liquid -->
+<section class="custom-wine-section">
+  <div class="custom-wine-container">
+    <div class="image-section" style="background-image: url({{ section.settings.image | img_url: '600x' }});">
+    </div>
+    <div class="text-section">
+      <h3>{{ section.settings.subheading }}</h3>
+      <h1>{{ section.settings.heading }}</h1>
+      <p>{{ section.settings.description }}</p>
+      <a href="{{ section.settings.button_link }}" class="cta-button">{{ section.settings.button_text }}</a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Wine Promotion Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "I GRANDI ROSSI"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Autunno alle porte"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Importanti Denominazioni ed etichette che raccontano una storia, una tradizione e un territorio. Questo mese acquistando dalla selezione puoi guadagnare doppi punti fedeltà!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wine Promotion Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
